@@ -1,5 +1,5 @@
 /* =========================
-   GLOBAL / RESET....
+   GLOBAL / RESET
 ========================= */
 * {
   box-sizing: border-box;
@@ -8,8 +8,8 @@
 body {
   margin: 0;
   font-family: 'Montserrat', Arial, sans-serif;
-  background-color: #0b0c1a;
-  color: #f0f0f0;
+  background-color: #fde8f1;
+  color: #4a2a38;
   background-image: url("starry_sun.jpg");
   background-size: cover;
   background-repeat: repeat-y;
@@ -20,7 +20,7 @@ body {
    NAVBAR
 ========================= */
 .navbar {
-  background-color: #1b1d3a;
+  background-color: #f7c6d9;
   padding: 1em 2em;
   display: flex;
   justify-content: space-between;
@@ -40,13 +40,14 @@ body {
 }
 
 .navbar-right a {
-  color: white;
+  color: #4a2a38;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.2s ease;
 }
 
 .navbar-right a:hover {
-  color: #aaaaff;
+  color: #a64d79;
 }
 
 /* =========================
@@ -62,11 +63,11 @@ body {
    CARDS
 ========================= */
 .resource-card {
-  background-color: rgba(28, 31, 47, 0.95);
+  background-color: rgba(255, 240, 247, 0.95);
   margin: 2em auto;
   padding: 1.5em;
   border-radius: 12px;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 12px rgba(166, 77, 121, 0.15);
 }
 
 /* =========================
@@ -83,18 +84,19 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid #5555aa;
+  border: 3px solid #e89bb9;
   object-fit: cover;
 }
 
 .bio-text h1 {
   margin-bottom: 0.2em;
+  color: #7a3555;
 }
 
 .bio-text h4 {
   margin-top: 0;
   font-weight: normal;
-  color: #ccccff;
+  color: #a64d79;
 }
 
 /* =========================
@@ -117,19 +119,19 @@ body {
 
 .reflection {
   flex: 1;
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(255, 210, 228, 0.4);
   padding: 1em;
   border-radius: 8px;
 }
 
 .reflection h3 {
   margin-top: 0;
-  color: #aaaaff;
+  color: #a64d79;
 }
 
 .reflection p {
   font-size: 0.95em;
-  color: #dddddd;
+  color: #5a2f42;
 }
 
 /* =========================
@@ -154,7 +156,7 @@ body {
   height: 80px;
   width: 80px;
   border-radius: 10px;
-  border: 2px solid white;
+  border: 2px solid #e89bb9;
   object-fit: cover;
 }
 
@@ -164,7 +166,7 @@ body {
 footer {
   text-align: center;
   font-size: 0.85em;
-  color: #cccccc;
+  color: #7a3555;
 }
 
 /* =========================
@@ -192,4 +194,3 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
   }
-}
