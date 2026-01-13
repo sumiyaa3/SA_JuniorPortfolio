@@ -51,6 +51,55 @@ body {
 }
 
 /* =========================
+   DROPDOWN MENU
+========================= */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background-color: #f7c6d9;
+  border: 1px solid #e89bb9;
+  border-radius: 8px;
+  padding: 0.5em 0;
+  margin-top: 0.5em;
+  min-width: 180px;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75em 1.5em;
+  color: #4a2a38;
+  text-decoration: none;
+  font-weight: normal;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(166, 77, 121, 0.2);
+  color: #a64d79;
+}
+
+/* =========================
    PAGE LAYOUT
 ========================= */
 .home-card {
@@ -193,4 +242,4 @@ footer {
   .navbar-right {
     flex-wrap: wrap;
     justify-content: center;
-  }
+  }}

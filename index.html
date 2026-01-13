@@ -35,9 +35,30 @@
 
       <ul class="navbar-right">
         <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="cfus.html">CFUs</a></li>
-        <li><a href="labs.html">Labs</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="projects.html">All Projects</a></li>
+            <li><a href="project1.html">Project 1</a></li>
+            <li><a href="project2.html">Project 2</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">CFUs</a>
+          <ul class="dropdown-menu">
+            <li><a href="cfus.html">All CFUs</a></li>
+            <li><a href="cfu1.html">CFU 1</a></li>
+            <li><a href="cfu2.html">CFU 2</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Labs</a>
+          <ul class="dropdown-menu">
+            <li><a href="labs.html">All Labs</a></li>
+            <li><a href="lab1.html">Lab 1</a></li>
+            <li><a href="lab2.html">Lab 2</a></li>
+          </ul>
+        </li>
         <li><a href="contact.html">Contacts</a></li>
       </ul>
     </nav>
@@ -141,6 +162,36 @@
   <script>
     // Auto-updates the year in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Dropdown menu functionality
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+    
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener("click", function(e) {
+        e.preventDefault();
+        const dropdown = this.parentElement;
+        const menu = dropdown.querySelector(".dropdown-menu");
+        
+        // Close other open dropdowns
+        document.querySelectorAll(".dropdown").forEach(d => {
+          if (d !== dropdown) {
+            d.classList.remove("active");
+          }
+        });
+        
+        // Toggle current dropdown
+        dropdown.classList.toggle("active");
+      });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener("click", function(e) {
+      if (!e.target.closest(".dropdown")) {
+        document.querySelectorAll(".dropdown").forEach(d => {
+          d.classList.remove("active");
+        });
+      }
+    });
   </script>
 
 </body>
