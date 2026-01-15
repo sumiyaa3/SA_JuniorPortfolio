@@ -20,7 +20,7 @@ body {
    NAVBAR
 ========================= */
 .navbar {
-  background-color: #f7c6d9;
+  background-color: #ffe5ed;
   padding: 1em 2em;
   display: flex;
   justify-content: space-between;
@@ -95,7 +95,7 @@ body {
 }
 
 .dropdown-menu a:hover {
-  background-color: rgba(166, 77, 121, 0.2);
+  background-color: rgba(255, 177, 200, 0.2);
   color: #a64d79;
 }
 
