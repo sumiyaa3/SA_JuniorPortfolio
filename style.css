@@ -10,7 +10,7 @@ body {
   font-family: 'Montserrat', Arial, sans-serif;
   /*background-color: #fde8f1;*/
   color: #4a2a38;
-  background-image: url("background.jpeg");
+  background-image: url("background.png");
   background-size: cover;
   background-repeat: repeat-y;
   background-attachment: fixed;
